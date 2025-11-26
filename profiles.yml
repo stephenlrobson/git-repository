@@ -1,0 +1,8 @@
+jaffle_shop:
+target: dev
+outputs:
+  dev:
+    database: ANALYTICS
+    role: ACCOUNTADMIN
+    schema: DBT_SROBSON
+    type: snowflake
