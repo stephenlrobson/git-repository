@@ -8,7 +8,7 @@ with payments as (
         amount,
         created
 
-    from raw.stripe.payment
+    from {{ source('stripe', 'payment')}}
 
 )
 
