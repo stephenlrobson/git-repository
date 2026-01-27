@@ -1,4 +1,4 @@
-{% docs [order_status] %}
+{% docs order_status %}
 
 One fo the following values:
 | Status.       | Definition                       |
