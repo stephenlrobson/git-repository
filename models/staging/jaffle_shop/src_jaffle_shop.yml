@@ -25,14 +25,18 @@ sources:
 
 models:
   - name: stg_customer
+    description: The grain of this table is one unique customer per row.
     columns:
       - name: customer_id
+        description: Primary key for the customers table.
         data_tests:
           - unique
           - not_null
   - name: stg_orders
+    description: One order per row.
     columns:
       - name: order_id
+        description: PK for the orders table.
         data_tests:
           - unique
           - not_null
