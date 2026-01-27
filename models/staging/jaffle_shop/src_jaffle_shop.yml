@@ -15,24 +15,24 @@ sources:
        - name: id
          tests:
             - unique
-            - not null
+            - not_null
      - name: orders
 
 models:
   - name: stg_customer
     columns:
       - name: customer_id
-        tests:
+        data_tests:
           - unique
           - not_null
   - name: stg_orders
     columns:
       - name: order_id
-        tests:
+        data_tests:
           - unique
           - not_null
-      - name: status
-        tests:
+      - name: order_status
+        data_tests:
           - accepted_values:
               values:
                 - shipped
@@ -40,3 +40,8 @@ models:
                 - completed
                 - return_pending
                 - placed
+      - name: customer_id
+        data_tests:
+          - relationships:
+              field: customer_id
+              to: ref('stg_customer')
