@@ -1,0 +1,9 @@
+jaffle_prof:
+  target: dev
+  outputs:
+    dev:
+      warehouse: COMPUTE_WH
+      database: ANALYTICS
+      role: ACCOUNTADMIN
+      schema: DBT_SROBSON
+      type: snowflake
