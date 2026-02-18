@@ -27,7 +27,10 @@ fct_orders as (
         o.order_id,
         o.customer_id,
         o.order_date,
-        coalesce (order_payments.amount, 0) as amount
+        coalesce (order_payments.amount, 0) as amount,
+        o.days_since_ordered,
+        o.is_status_pending,
+        o.order_status
     from orders o
     left join order_payments using (order_id)
 )
